@@ -1,0 +1,112 @@
+/* CSS variables for easy color recall */
+:root{
+    --space-grey: #434448;
+    --bright-blue: #5192d8;
+}
+
+* {
+    padding:0;
+    margin:0;
+}
+/* Sets default font size to 10px to make em calculations more intuitive (2m = 20px) and font families */
+
+html{
+    font-size: 62.5%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.header{
+    background-color: var(--space-grey);
+    display: flex;
+    height:7.5vh;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.title{
+    padding-left: 100px;
+    padding-right: 10px;
+    background-color:var(--bright-blue);
+    font-size: 6em;
+    color: #fff;
+}
+
+.navbar{
+    margin-right:2%;
+}
+
+.navbar ul li{
+    border-bottom: 5px solid var(--bright-blue);
+    display: inline-block;
+    margin: 0 15px;
+    padding: 0 15px;
+    
+}
+.navbar ul li a{
+    color: var(--bright-blue);
+    font-size: 3em;
+    text-decoration: none;
+    margin:
+}
+
+.hero {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("https://via.placeholder.com/1000/#0000FF/#808080?Text=Placeholder");
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-end;
+    align-items:flex-end;
+
+}
+.caption-card{
+    margin:1vw;
+    font-size: 3em;
+    background-color: var(--space-grey);
+    color: white;
+    padding: .5em;
+    border: 3px solid black;
+}
+
+.wrapper{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.item-heading{
+    border-right: 5px solid var(--bright-blue);
+    margin: 20px;
+    padding: 10px;
+    flex: 15%;
+    text-align: right;
+}
+.item-heading h2{
+    margin-top: auto;
+    font-size: 3.5em;
+}
+.item-content{
+    border: 5px solid red;
+    margin: 20px;
+    padding: 10px;
+    flex:75%;
+}
+
+.contact-menu ul li{
+    border-bottom: 5px solid var(--bright-blue);
+    display: inline-block;
+    margin: 0 15px;
+    padding: 0 15px;
+}
+
+@media screen and (max-width: 992px) {
+
+  }
+@media screen and (max-width: 768px){
+
+}
+@media screen and (max-width: 576px){
+
+}
