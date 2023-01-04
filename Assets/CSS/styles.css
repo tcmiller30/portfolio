@@ -1,7 +1,11 @@
 /* CSS variables for easy color recall */
 :root{
-    --space-grey: #434448;
-    --bright-blue: #5192d8;
+    --space-grey: #1f2021;
+    --blue-light: #2A6BBF;
+    --blue-dark: #021E73;
+    --blue-bold: #04268C;
+    --pink: #F25CCA;
+
 }
 
 * {
@@ -12,24 +16,30 @@
 
 html{
     font-size: 62.5%;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif
+}
+
+p{
+    font-size: 1.8em;
 }
 
 .header{
     background-color: var(--space-grey);
     display: flex;
-    height:7.5vh;
+    height:10vh;
     align-items: center;
     justify-content: space-between;
     
 }
-
+/* Header title styling */
 .title{
-    padding-left: 100px;
-    padding-right: 10px;
-    background-color:var(--bright-blue);
+    padding: 1vh 2vw ;
+    padding-left: 6vw;
+    background-color:var(--blue-dark);
     font-size: 6em;
-    color: #fff;
+    color: var(--pink);
+    border: 5px solid var(--blue-bold);
+    border-left: none;
 }
 
 .navbar{
@@ -37,27 +47,27 @@ html{
 }
 
 .navbar ul li{
-    border-bottom: 5px solid var(--bright-blue);
+    border-bottom: 5px solid var(--pink);
     display: inline-block;
     margin: 0 15px;
     padding: 0 15px;
     
 }
 .navbar ul li a{
-    color: var(--bright-blue);
+    color: var(--pink);
     font-size: 3em;
     text-decoration: none;
-    margin:
+    margin: 0 10px;;
 }
-
+/* image anchored below the header and navbar */
 .hero {
     display: flex;
     height: 300px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("https://via.placeholder.com/1000/#0000FF/#808080?Text=Placeholder");
-    background-size: cover;
-    background-position: center;
+    background-image: url("../hero.jpg");
+    background-size: 50vw auto;
+    /* url("https://via.placeholder.com/1000/#0000FF/#808080?Text=Placeholder"); */;
     justify-content: flex-end;
     align-items:flex-end;
 
@@ -65,40 +75,62 @@ html{
 .caption-card{
     margin:1vw;
     font-size: 3em;
-    background-color: var(--space-grey);
-    color: white;
+    background-color: var(--blue-dark);
+    color: var(--pink);
     padding: .5em;
-    border: 3px solid black;
+    border: 5px solid var(--blue-bold);
 }
 
+/* Contains all main content in a flexbox */
 .wrapper{
+    margin:2vw 4vw;
     display: flex;
     flex-wrap:wrap;
+    /* height: 100vh; */
 }
 
 .item-heading{
-    border-right: 5px solid var(--bright-blue);
+    border-right: 5px solid var(--blue-bold);
     margin: 20px;
     padding: 10px;
     flex: 15%;
     text-align: right;
+    color: var(--blue-bold)
 }
 .item-heading h2{
     margin-top: auto;
     font-size: 3.5em;
 }
+/* Houses  */
 .item-content{
     border: 5px solid red;
     margin: 20px;
     padding: 10px;
+    /* Keeps content anchored to the right of the wrapper flexbox without overflowing to the next row when situated next to .item-heading */
     flex:75%;
 }
+.content-card{
 
-.contact-menu ul li{
-    border-bottom: 5px solid var(--bright-blue);
+}
+
+/* Inline links to contact info styled li*/
+.contact-container{
+    display:flex;
+    justify-content: space-around;
+}
+.contact-list ul li{
+    border-bottom: 5px solid var(--pink);
     display: inline-block;
     margin: 0 15px;
-    padding: 0 15px;
+    padding: 5px 15px;
+    
+}
+.contact-list ul li a{
+    color: var(--blue-bold);
+    font-size: 3em;
+    text-decoration: none;
+    margin: 10px;
+
 }
 
 @media screen and (max-width: 992px) {
