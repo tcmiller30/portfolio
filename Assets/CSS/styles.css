@@ -38,7 +38,7 @@ p{
     background-color:var(--blue-dark);
     font-size: 6em;
     color: var(--pink);
-    border: 5px solid var(--blue-bold);
+    border: 5px solid #ddd;
     border-left: none;
 }
 
@@ -62,7 +62,7 @@ p{
 /* image anchored below the header and navbar */
 .hero {
     display: flex;
-    height: 300px;
+    height: 20vh;;
     width: 100%;
     margin-bottom: 25px;
     background-image: url("../hero.jpg");
@@ -72,13 +72,15 @@ p{
     align-items:flex-end;
 
 }
-.caption-card{
+.caption-hero{
     margin:1vw;
+    margin-bottom:0px;
     font-size: 3em;
     background-color: var(--blue-dark);
     color: var(--pink);
     padding: .5em;
-    border: 5px solid var(--blue-bold);
+    border: 3px solid #ddd;
+    border-bottom: none;
 }
 
 /* Contains all main content in a flexbox */
@@ -89,7 +91,7 @@ p{
     /* height: 100vh; */
 }
 
-.item-heading{
+.section-heading{
     border-right: 5px solid var(--blue-bold);
     margin: 20px;
     padding: 10px;
@@ -97,12 +99,12 @@ p{
     text-align: right;
     color: var(--blue-bold)
 }
-.item-heading h2{
+.section-heading h2{
     margin-top: auto;
     font-size: 3.5em;
 }
 /* Houses  */
-.item-content{
+.section-content{
     border: 5px solid red;
     margin: 20px;
     padding: 10px;
@@ -110,6 +112,8 @@ p{
     flex:75%;
 }
 .content-card{
+    display: flex;
+    background-color: #021E73;
 
 }
 
@@ -132,13 +136,61 @@ p{
     margin: 10px;
 
 }
-
+/* tablet sized screens */
 @media screen and (max-width: 992px) {
-
+    .title{
+        font-size: 3em;
+        padding: 1vh 2vw ;
+        padding-left: 6vw;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .navbar ul li a{
+        font-size: 2em;
+        margin:5px;
+        padding: 2%;
+        
+    }
+    .contact-list ul li{
+        border-bottom: 3px solid var(--pink);
+        display: inline-block;
+    }
   }
 @media screen and (max-width: 768px){
-
+    .title{
+        font-size: 3em;
+        padding: 1vh 2vw ;
+        padding-left: 6vw;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .navbar ul li a{
+        font-size: 2em;
+        margin:5px;
+        padding: 2%;
+        
+    }
+    .contact-list ul li{
+        border-bottom: 3px solid var(--pink);
+        display: inline-block;
+    }
 }
 @media screen and (max-width: 576px){
-
+    .title{
+        font-size: 3em;
+        padding: 1vh 2vw ;
+        padding-left: 6vw;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .navbar ul li a{
+        font-size: 2em;
+        margin:5px;
+        padding: 2%;
+        
+    }
+    .contact-list ul li{
+        border-bottom: 3px solid var(--pink);
+        display: inline-block;
+    }
 }
