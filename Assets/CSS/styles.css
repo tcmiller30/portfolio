@@ -1,6 +1,7 @@
 /* CSS variables for easy color recall */
 :root{
     --space-grey: #1f2021;
+    --dark-grey: #303233;
     --blue-light: #2A6BBF;
     --blue-dark: #021E73;
     --blue-bold: #04268C;
@@ -16,7 +17,7 @@
 
 html{
     font-size: 62.5%;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
 }
 
 p{
@@ -62,12 +63,12 @@ p{
 /* image anchored below the header and navbar */
 .hero {
     display: flex;
-    height: 20vh;;
+    height: 20vh;
     width: 100%;
     margin-bottom: 25px;
     background-image: url("../hero.jpg");
     background-size: 50vw auto;
-    /* url("https://via.placeholder.com/1000/#0000FF/#808080?Text=Placeholder"); */;
+    /* url("https://via.placeholder.com/1000/#0000FF/#808080?Text=Placeholder"); */
     justify-content: flex-end;
     align-items:flex-end;
 
@@ -84,11 +85,16 @@ p{
 }
 
 /* Contains all main content in a flexbox */
-.wrapper{
+.container{
     margin:2vw 4vw;
     display: flex;
-    flex-wrap:wrap;
+    flex-direction: column;
+    width: 100%;
     /* height: 100vh; */
+}
+
+.section-wrapper{
+    display: flex;
 }
 
 .section-heading{
@@ -108,13 +114,77 @@ p{
     border: 5px solid red;
     margin: 20px;
     padding: 10px;
-    /* Keeps content anchored to the right of the wrapper flexbox without overflowing to the next row when situated next to .item-heading */
+    /* Keeps content anchored to the right of the wrapper flexbox without overflowing to the next row when situated next to .section-heading */
     flex:75%;
 }
-.content-card{
+.work-card-container{
     display: flex;
-    background-color: #021E73;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:20px;
+}
+.work-card{
+    display: flex;
+    margin:1em;
+    /* width: 40%; */
+    height: 20em;
+    flex:35%;
+    border: 5px solid var(--blue-dark);
+    color: white;
+    align-items: flex-end;
+}
 
+.work-card.first{
+    flex:75%;
+    height:30em;
+    
+}
+.led-wall{
+    background-image: url("led-wall.png");
+    background-size: 100% auto;
+}
+
+.card-caption{
+    font-size: 2.5em;
+    background-color: var(--blue-dark);
+    color: var(--pink);
+    padding: .5em;
+    border: 3px solid #ddd;
+    position: absolute;
+    margin: 2vh 1vw
+}
+.card-caption h3{
+
+}
+.card-caption h4{
+    
+}
+
+.fill-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+#surf-report{
+    object-position: center 63%;
+}
+
+#led-wall{
+    object-position: center 63%;
+}
+
+#calculator{
+    object-position: center 63%;
+}
+
+#pastel-puzzels{
+    object-position: center 63%;
+}
+
+#run-buddy{
+    object-position: center 63%;
 }
 
 /* Inline links to contact info styled li*/
