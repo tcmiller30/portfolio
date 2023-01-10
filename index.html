@@ -14,24 +14,27 @@
         <h1 class="title">Travis Miller</h1>
         <nav class="navbar">
             <ul>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Contact Me</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact Me</a></li>
                 <li><a href="#">Resume</a></li>
             </ul>
         </nav>
         
      </header>   
     
-    
+    <!-- Hero/Image anchored below navbar/header -->
+    <!-- Outside of header to keep formatting independent  -->
     <div class="hero">
       <div class="caption-hero">"No great thing is created suddenly"</div>
     </div>
     <main>    
+      <!-- Contains all the sections in a column flexbox -->
       <content class="wrapper">
+
       <!-- About Me Section -->
       <div class="section-wrapper">
-        <section class="section-heading">
+        <section class="section-heading" id="about-me">
           <h2>About Me</h2>
         </section>
 
@@ -48,36 +51,68 @@
           </p>
         </section>
       </div>
+
       <!-- Work Section -->
       <div class="section-wrapper">
-        <section class="section-heading">
+        <section class="section-heading" id= "work">
           <h2>Work</h2>
         </section>
 
         <section class="section-content">
+          <!-- special flexbox wrapper to format the cards properly within the confines of the section content -->
           <div class="work-card-container">
-            <div class="work-card first" >
-              <img class="fill-image" src="Assets/waves.jpg" id="surf-report">
-              <div class="card-caption">Surf Report</div>
+            <!-- 1st card, surf report -->
+            <div class="work-card first">
+              <img class="image-fill work-image" src="Assets/waves.jpg" id="surf-report">
+              <div class="card-caption first">
+                <a href="#" class="card">Surf Report</a>
+                <br>
+                <h4>MERN Stack</h4>
+              </div>
             </div>
-            <div class="work-card led-wall">
-              LED Wall
+            <!-- 2nd card, led wall -->
+            
+              <div class="work-card" id="led-wall">
+                <img class="image-fill work-image" src="Assets/led-wall.png" id="led-wall">
+                <div class="card-caption">
+                  <a href="#" class="card">LED Wall</a>
+                  <br>
+                  <h4>Node/IoT</h4>
+                </div>
             </div>
+            <!-- 3rd card, calculator -->
             <div class="work-card">
-              Calculator
+              <img class="image-fill work-image" src="Assets/calculator.webp" id="calculator">
+              <div class="card-caption">
+                <a href="#" class="card">Calculator</a>
+                <br>
+                <h4>React/JavaScript/CSS</h4>
+              </div>
             </div>
+            <!-- 4th card, pastel puzzels -->
             <div class="work-card">
-              Pastel Puzzels
+              <img class="image-fill work-image" src="Assets/pastels.jpg" id="pastel-puzzles">
+              <div class="card-caption">
+                <a href="#" class="card">Pastel Puzzles</a>
+                <br>
+                <h4>MERN Stack</h4>
+              </div>
             </div>
+            <!-- 5th card, run buddy -->
             <div class="work-card">
-              Run Buddy
+              <img class="image-fill work-image" src="Assets/running.jpg" id="run-buddy">
+              <div class="card-caption">
+                <a href="#" class="card">Run Buddy</a>
+                <br>
+                <h4>HTML/CSS</h4>
+              </div>
             </div>
           </div>
         </section>
       </div>
       <!-- Contact Section -->
       <div class="section-wrapper">
-        <section class="section-heading">
+        <section class="section-heading" id="contact">
           <h2>Contact Me</h2>
         </section>
 

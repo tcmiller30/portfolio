@@ -5,6 +5,7 @@
     --blue-light: #2A6BBF;
     --blue-dark: #021E73;
     --blue-bold: #04268C;
+    --blue-deep: #01103c;
     --pink: #F25CCA;
 
 }
@@ -25,21 +26,21 @@ p{
 }
 
 .header{
-    background-color: var(--space-grey);
+    background-color: var(--blue-dark);
     display: flex;
     height:10vh;
     align-items: center;
     justify-content: space-between;
-    
+    border-bottom: 10px solid var(--blue-bold);
 }
 /* Header title styling */
 .title{
     padding: 1vh 2vw ;
     padding-left: 6vw;
-    background-color:var(--blue-dark);
+    background-color:var(--blue-bold);
     font-size: 6em;
     color: var(--pink);
-    border: 5px solid #ddd;
+    border: 5px solid var(--pink);
     border-left: none;
 }
 
@@ -77,10 +78,10 @@ p{
     margin:1vw;
     margin-bottom:0px;
     font-size: 3em;
-    background-color: var(--blue-dark);
+    background-color: var(--blue-bold);
     color: var(--pink);
     padding: .5em;
-    border: 3px solid #ddd;
+    border: 5px solid var(--pink);
     border-bottom: none;
 }
 
@@ -95,13 +96,15 @@ p{
 
 .section-wrapper{
     display: flex;
+    margin: 5%;
 }
 
+/* Section Headings anchored to left side of screen. Border-right on creates visual divider */
 .section-heading{
     border-right: 5px solid var(--blue-bold);
     margin: 20px;
     padding: 10px;
-    flex: 15%;
+    flex: 5%;
     text-align: right;
     color: var(--blue-bold)
 }
@@ -109,58 +112,99 @@ p{
     margin-top: auto;
     font-size: 3.5em;
 }
-/* Houses  */
+/* Section Content houses  */
 .section-content{
-    border: 5px solid red;
     margin: 20px;
     padding: 10px;
-    /* Keeps content anchored to the right of the wrapper flexbox without overflowing to the next row when situated next to .section-heading */
     flex:75%;
 }
+/* ********************** Work Card ************************************************************************************************** */
 .work-card-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin:20px;
 }
+/* Contains project title/info in a card */
 .work-card{
     display: flex;
     margin:1em;
-    /* width: 40%; */
-    height: 20em;
+    width: 40%;
+    height: 30em;
+    /* Flex 35% sets cards to a small enough size to have margins but large enough to only be able to fit 2 per row */
     flex:35%;
-    border: 5px solid var(--blue-dark);
+    border: 10px solid var(--blue-bold);
     color: white;
     align-items: flex-end;
+    position:relative;
 }
-
+/* Sets the first card in the work section to be larger than the others and stand by itself on its own row */
 .work-card.first{
     flex:75%;
-    height:30em;
-    
-}
-.led-wall{
-    background-image: url("led-wall.png");
-    background-size: 100% auto;
+    height:50em;
 }
 
 .card-caption{
-    font-size: 2.5em;
-    background-color: var(--blue-dark);
-    color: var(--pink);
-    padding: .5em;
-    border: 3px solid #ddd;
-    position: absolute;
-    margin: 2vh 1vw
-}
-.card-caption h3{
-
+    position: absolute; 
+    padding-right: 2em;
+    margin: 2vh 1vh;
+    margin-left: -.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:35%;
+    height: 10em;
+    background-color: var(--blue-bold);
 }
 .card-caption h4{
-    
+    margin-top: 0%;
+    padding-left:2% ;
+    margin-left: 10%;
+    font-size: 2rem;
+    border-left: 2px solid var(--pink)
 }
-
-.fill-image{
+.card-caption a.card{
+    font-family: 'Lucida Sans';
+    margin-left:2.5%;
+    font-size: 4rem;
+    color: var(--pink);
+    text-decoration: none;
+    z-index:1;
+    }
+    /* when caption becomes a link when hovered over instead of just */
+.card-caption a.card::after{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+}
+.work-card:hover .card-caption a.card::after{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+}
+.card-caption.first{
+    width: 20%;
+}
+.work-image{
+    -webkit-filter: blur(4px);
+    filter:blur(4px);
+    /* Putting transition code in this class instead of :hover */
+    -webkit-transition: .5s ease-out;
+    -moz-transition: .5s ease-out;
+    -o-transition: .5s ease-out;
+    transition: .5s ease-out;
+}
+/* When a work card is hovered over by user, that card's image will become clear. */
+.work-card:hover .work-image{
+    filter:blur(0);
+}
+.image-fill{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -172,19 +216,19 @@ p{
 }
 
 #led-wall{
-    object-position: center 63%;
+    object-position: center center;
 }
 
 #calculator{
-    object-position: center 63%;
+    object-position: center 45%;
 }
 
-#pastel-puzzels{
-    object-position: center 63%;
+#pastel-puzzles{
+    object-position: center 80%;
 }
 
 #run-buddy{
-    object-position: center 63%;
+    object-position: center 93%;
 }
 
 /* Inline links to contact info styled li*/
@@ -246,18 +290,33 @@ p{
     }
 }
 @media screen and (max-width: 576px){
+    .header{
+        height: 7.5vh;
+    }
     .title{
-        font-size: 3em;
-        padding: 1vh 2vw ;
+        font-size: 2rem;
+        padding: 2vh 2vw ;
         padding-left: 6vw;
         overflow: hidden;
         white-space: nowrap;
     }
+    .navbar ul li{
+        border-bottom: 3px solid var(--pink);
+        display: inline-block;
+        margin: auto;
+        padding:0px 1vw;
+    }
     .navbar ul li a{
-        font-size: 2em;
+        font-size: 1.2em;
         margin:5px;
-        padding: 2%;
+        padding:3%;
         
+    }
+    .hero{
+        height: 13vh;
+    }
+    .caption-hero{
+        font-size: 1.3rem;
     }
     .contact-list ul li{
         border-bottom: 3px solid var(--pink);
