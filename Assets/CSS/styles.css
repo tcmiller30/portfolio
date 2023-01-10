@@ -18,11 +18,11 @@
 
 html{
     font-size: 62.5%;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    font-family: Helvetica, Arial,  sans-serif
 }
 
 p{
-    font-size: 1.8em;
+    font-size: 2.4rem;
 }
 
 .header{
@@ -136,6 +136,7 @@ p{
     border: 10px solid var(--blue-bold);
     color: white;
     align-items: flex-end;
+    /* lets */
     position:relative;
 }
 /* Sets the first card in the work section to be larger than the others and stand by itself on its own row */
@@ -143,7 +144,7 @@ p{
     flex:75%;
     height:50em;
 }
-
+/* caption box to display work information */
 .card-caption{
     position: absolute; 
     padding-right: 2em;
@@ -152,42 +153,25 @@ p{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width:35%;
+    width:40%;
     height: 10em;
     background-color: var(--blue-bold);
 }
 .card-caption h4{
     margin-top: 0%;
-    padding-left:2% ;
+    padding-left:2%;
     margin-left: 10%;
     font-size: 2rem;
     border-left: 2px solid var(--pink)
 }
-.card-caption a.card{
+.card-caption h3{
     font-family: 'Lucida Sans';
     margin-left:2.5%;
-    font-size: 4rem;
+    font-size: 3.8rem;
     color: var(--pink);
     text-decoration: none;
     z-index:1;
     }
-    /* when caption becomes a link when hovered over instead of just */
-.card-caption a.card::after{
-    position: absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-}
-.work-card:hover .card-caption a.card::after{
-    position: absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-}
 .card-caption.first{
     width: 20%;
 }
