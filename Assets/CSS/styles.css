@@ -28,38 +28,41 @@ p{
 .header{
     background-color: var(--blue-dark);
     display: flex;
-    height:10vh;
+    height:130px;
     align-items: center;
     justify-content: space-between;
     border-bottom: 10px solid var(--blue-bold);
 }
 /* Header title styling */
 .title{
-    padding: 1vh 2vw ;
-    padding-left: 6vw;
+    margin: 5px;
+    margin-left:0;
+    padding: 10px 2vw ;
+    padding-left: 8vw;
     background-color:var(--blue-bold);
-    font-size: 6em;
+    font-size: 6rem;
     color: var(--pink);
     border: 5px solid var(--pink);
     border-left: none;
 }
 
 .navbar{
-    margin-right:2%;
+    margin-right:3%;
 }
 
 .navbar ul li{
     border-bottom: 5px solid var(--pink);
     display: inline-block;
-    margin: 0 15px;
-    padding: 0 15px;
+    /* controls underline width for navbar links */
+    margin: 0 1.0vw;
+    padding: 0 25px;
     
 }
 .navbar ul li a{
     color: var(--pink);
     font-size: 3em;
     text-decoration: none;
-    margin: 0 10px;;
+    /* margin: 0 0; */
 }
 /* image anchored below the header and navbar */
 .hero {
@@ -136,7 +139,7 @@ p{
     border: 10px solid var(--blue-bold);
     color: white;
     align-items: flex-end;
-    /* lets */
+    /* Makes elements assigned the work-card positioned so the card-caption class is able to position itself within it */
     position:relative;
 }
 /* Sets the first card in the work section to be larger than the others and stand by itself on its own row */
@@ -146,6 +149,7 @@ p{
 }
 /* caption box to display work information */
 .card-caption{
+    /* position:absolute lets caption overlap the image within the work-card container rather than being placed adjacent to it */
     position: absolute; 
     padding-right: 2em;
     margin: 2vh 1vh;
@@ -234,19 +238,82 @@ p{
     margin: 10px;
 
 }
-/* tablet sized screens */
-@media screen and (max-width: 992px) {
+
+
+/* .title{
+    margin:10px;
+    margin-left:0;
+    padding: 10px 2vw ;
+    padding-left: 8vw;
+    background-color:var(--blue-bold);
+    font-size: 6rem;
+    color: var(--pink);
+    border: 5px solid var(--pink);
+    border-left: none;
+}
+
+.navbar{
+    margin-right:5%;
+}
+
+.navbar ul li{
+    border-bottom: 5px solid var(--pink);
+    display: inline-block;
+    /* controls underline width for navbar links */
+    /* margin: 0 1.0vw;
+    padding: 0 25px; */
+    
+/* } */
+.navbar ul li a{
+    color: var(--pink);
+    font-size: 3em;
+    text-decoration: none;
+} 
+
+
+@media screen and (max-width: 1450px){
     .title{
-        font-size: 3em;
-        padding: 1vh 2vw ;
+        font-size: 5.25rem;
+        padding: 10px 1.75vw;
         padding-left: 6vw;
         overflow: hidden;
         white-space: nowrap;
     }
+    .navbar ul li{
+        border-bottom: 5px solid var(--pink);
+        display: inline-block;
+        margin: 0 0.5em;
+        padding: 0 25px;
+    }
+    .navbar ul li a{
+        font-size: 2.25em;
+        
+    }
+    .contact-list ul li{
+        border-bottom: 3px solid var(--pink);
+        display: inline-block;
+    }
+  }
+
+/* tablet sized screens */
+@media screen and (max-width: 1050px){
+    .title{
+        font-size: 4rem;
+        padding: 10px 1.25vw ;
+        padding-left: 4vw;
+        overflow: hidden;
+        white-space: nowrap;
+        
+    }
+    .navbar ul li{
+        border-bottom: 4px solid var(--pink);
+        display: inline-block;
+        padding: 0 5px;
+        margin:0.3em;
+    }
     .navbar ul li a{
         font-size: 2em;
-        margin:5px;
-        padding: 2%;
+        margin:10px;
         
     }
     .contact-list ul li{
@@ -256,16 +323,16 @@ p{
   }
 @media screen and (max-width: 768px){
     .title{
-        font-size: 3em;
+        font-size: 2.75rem;
         padding: 1vh 2vw ;
         padding-left: 6vw;
         overflow: hidden;
         white-space: nowrap;
     }
     .navbar ul li a{
-        font-size: 2em;
-        margin:5px;
-        padding: 2%;
+        font-size: 1.75rem;
+        padding: auto;
+        margin:auto;
         
     }
     .contact-list ul li{
@@ -275,11 +342,11 @@ p{
 }
 @media screen and (max-width: 576px){
     .header{
-        height: 7.5vh;
+        height: 100px;;
     }
     .title{
-        font-size: 2rem;
-        padding: 2vh 2vw ;
+        font-size: 2.5rem;
+        padding: 10px 20px ;
         padding-left: 6vw;
         overflow: hidden;
         white-space: nowrap;
@@ -287,13 +354,13 @@ p{
     .navbar ul li{
         border-bottom: 3px solid var(--pink);
         display: inline-block;
-        margin: auto;
-        padding:0px 1vw;
+        padding: auto;
+        margin:auto;
     }
     .navbar ul li a{
-        font-size: 1.2em;
-        margin:5px;
-        padding:3%;
+        font-size: 1.25em;
+        margin:3px;
+        padding: 2%;
         
     }
     .hero{
