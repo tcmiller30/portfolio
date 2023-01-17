@@ -97,9 +97,11 @@ p{
     /* height: 100vh; */
 }
 
+/* contains section groups within the main content, including the .section-heading and .section-content classes */
 .section-wrapper{
     display: flex;
     margin: 5%;
+    /* flex-wrap: wrap; */
 }
 
 /* Section Headings anchored to left side of screen. Border-right on creates visual divider */
@@ -107,9 +109,9 @@ p{
     border-right: 5px solid var(--blue-bold);
     margin: 20px;
     padding: 10px;
-    flex: 5%;
+    flex: 20%;
     text-align: right;
-    color: var(--blue-bold)
+    color: var(--blue-bold);
 }
 .section-heading h2{
     margin-top: auto;
@@ -117,10 +119,13 @@ p{
 }
 /* Section Content houses  */
 .section-content{
+    /* display: flex; */
     margin: 20px;
     padding: 10px;
     flex:75%;
+    padding-bottom: 2%;
 }
+
 /* ********************** Work Card ************************************************************************************************** */
 .work-card-container{
     display: flex;
@@ -150,39 +155,41 @@ p{
 /* caption box to display work information */
 .card-caption{
     /* position:absolute lets caption overlap the image within the work-card container rather than being placed adjacent to it */
-    position: absolute; 
-    padding-right: 2em;
+    position: absolute;
+    padding:.5em;
+    padding-right: 4em;
     margin: 2vh 1vh;
     margin-left: -.5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width:40%;
+    /* width:45%; */
     height: 10em;
     background-color: var(--blue-bold);
 }
 .card-caption h4{
-    margin-top: 0%;
-    padding-left:2%;
+    margin: 0%;
     margin-left: 10%;
-    font-size: 2rem;
-    border-left: 2px solid var(--pink)
+    padding-left:2%;
+    font-size: 1.7rem;
+    border-left: 2px solid var(--pink);
+    z-index:1;
 }
 .card-caption h3{
     font-family: 'Lucida Sans';
     margin-left:2.5%;
-    font-size: 3.8rem;
+    font-size: 3rem;
     color: var(--pink);
     text-decoration: none;
-    z-index:1;
+    
     }
 .card-caption.first{
-    width: 20%;
+    width: 23%;
 }
 .work-image{
     -webkit-filter: blur(4px);
     filter:blur(4px);
-    /* Putting transition code in this class instead of :hover */
+    /* Putting transition code in this class instead of :hover makes the effect appear when hover transitions between active and inactive both ways*/
     -webkit-transition: .5s ease-out;
     -moz-transition: .5s ease-out;
     -o-transition: .5s ease-out;
@@ -192,6 +199,7 @@ p{
 .work-card:hover .work-image{
     filter:blur(0);
 }
+/* Forces image to fill confines of parent container without altering dimensions */
 .image-fill{
     width: 100%;
     height: 100%;
@@ -220,58 +228,44 @@ p{
 }
 
 /* Inline links to contact info styled li*/
-.contact-container{
-    display:flex;
+#contact-content{
+    display: flex;
+    align-items: center;
     justify-content: space-around;
+    
+}
+.contact-list ul {
+    margin:auto;
+    padding: auto;
 }
 .contact-list ul li{
     border-bottom: 5px solid var(--pink);
     display: inline-block;
-    margin: 0 15px;
-    padding: 5px 15px;
+    margin: 0 2em;
+    padding: 1em 2em;
+    
     
 }
 .contact-list ul li a{
+    text-align: center;
     color: var(--blue-bold);
-    font-size: 3em;
+    font-size: 2.2em;
     text-decoration: none;
-    margin: 10px;
+    margin: 1em;
 
 }
 
-
-/* .title{
-    margin:10px;
-    margin-left:0;
-    padding: 10px 2vw ;
-    padding-left: 8vw;
-    background-color:var(--blue-bold);
-    font-size: 6rem;
-    color: var(--pink);
-    border: 5px solid var(--pink);
-    border-left: none;
-}
-
-.navbar{
-    margin-right:5%;
-}
-
-.navbar ul li{
-    border-bottom: 5px solid var(--pink);
-    display: inline-block;
-    /* controls underline width for navbar links */
-    /* margin: 0 1.0vw;
-    padding: 0 25px; */
-    
-/* } */
 .navbar ul li a{
     color: var(--pink);
     font-size: 3em;
     text-decoration: none;
 } 
 
-
+/* ************************************************************************ Media Queries ************************************************************************ */
 @media screen and (max-width: 1450px){
+    p{
+        font-size: 2.2rem;
+    }
     .title{
         font-size: 5.25rem;
         padding: 10px 1.75vw;
@@ -279,6 +273,7 @@ p{
         overflow: hidden;
         white-space: nowrap;
     }
+    /* ************************ NavBar Settings ************************ */
     .navbar ul li{
         border-bottom: 5px solid var(--pink);
         display: inline-block;
@@ -289,14 +284,36 @@ p{
         font-size: 2.25em;
         
     }
+
+    /* ************************ Hero Settings ************************ */
+    .hero{
+        height: 19vh;
+    }
+    .caption-hero{
+        font-size: 2.5em;
+    }
+
+    /* ************************ Contact Me Settings ************************ */
     .contact-list ul li{
         border-bottom: 3px solid var(--pink);
         display: inline-block;
+        margin: 0 0.5em;
+        padding: 0 12.5px;
+    }
+    .contact-list ul li a{
+        font-size: 1.8rem;
     }
   }
 
 /* tablet sized screens */
 @media screen and (max-width: 1050px){
+    p{
+        font-size: 2rem;
+    }
+    .header{
+        height:100px;
+        border-bottom: 8px solid var(--blue-bold);
+    }
     .title{
         font-size: 4rem;
         padding: 10px 1.25vw ;
@@ -305,6 +322,8 @@ p{
         white-space: nowrap;
         
     }
+
+    /* ************************ NavBar Settings ************************ */
     .navbar ul li{
         border-bottom: 4px solid var(--pink);
         display: inline-block;
@@ -316,12 +335,53 @@ p{
         margin:10px;
         
     }
+
+    /* ************************ Hero Settings ************************ */
+
+    /* ************************ Section Settings ************************ */
+    .section-heading{flex:20%}
+    .section-content{flex:80%}
+
+
+    /* ************************ Work Card Settings ************************ */
+    .work-card{
+        height:25em;
+    }
+    .work-card.first{
+        height: 35em;
+    }
+    .card-caption{
+        
+    }
+    .card-caption.first{
+        width: 30%;
+    }
+    .card-caption h3{
+        font-size: 2.5rem; 
+        margin: 0;
+        text-align: left;
+    }
+    .card-caption h4{font-size: 1.5rem;}
+
+    /* ************************ Contact Me Settings ************************ */
     .contact-list ul li{
         border-bottom: 3px solid var(--pink);
         display: inline-block;
+        
+    }
+    .contact-list ul li a{
+        font-size: 1.44rem;
+        
     }
   }
 @media screen and (max-width: 768px){
+    p{
+        font-size: 1.8rem;
+    }
+    .header{
+        height: 80px;
+        border-bottom:5px solid var(--blue-bold);
+    }
     .title{
         font-size: 2.75rem;
         padding: 1vh 2vw ;
@@ -329,20 +389,46 @@ p{
         overflow: hidden;
         white-space: nowrap;
     }
+
+    /* ************************ NavBar Settings ************************ */
     .navbar ul li a{
         font-size: 1.75rem;
         padding: auto;
         margin:auto;
         
     }
+
+    /* ************************ Section Settings ************************ */
+    .section-heading{
+        flex:15%;
+    }
+    .section-content{
+        flex:85%;
+    }
+
+    /* ************************ Work Car Settings ************************ */
+    .work-card{}
+    .workcard.work-card.first{}
+    .card-caption{}
+    .card-caption.first{}
+    .card-caption h3{
+
+    }
+    .card-caption h4{}
+
+    /* ************************ Contact Me Settings ************************ */
     .contact-list ul li{
         border-bottom: 3px solid var(--pink);
         display: inline-block;
     }
 }
 @media screen and (max-width: 576px){
+    p{
+        font-size: 1.6rem;
+    }
     .header{
-        height: 100px;;
+        height: 75px;
+        border-bottom: 4px solid var(--blue-bold);
     }
     .title{
         font-size: 2.5rem;
@@ -351,6 +437,8 @@ p{
         overflow: hidden;
         white-space: nowrap;
     }
+
+    /* ************************ NavBar Settings ************************ */
     .navbar ul li{
         border-bottom: 3px solid var(--pink);
         display: inline-block;
@@ -359,18 +447,34 @@ p{
     }
     .navbar ul li a{
         font-size: 1.25em;
-        margin:3px;
-        padding: 2%;
         
     }
+
+    /* ************************ Hero Settings ************************ */
     .hero{
         height: 13vh;
     }
     .caption-hero{
         font-size: 1.3rem;
     }
+
+    /* ************************ Work Car Settings ************************ */
+    .work-card{}
+    .workcard.work-card.first{}
+    .card-caption{}
+    .card-caption.first{}
+    .card-caption h3{}
+    .card-caption h4{}
+
+    /* ************************ Contact Me Settings ************************ */
     .contact-list ul li{
         border-bottom: 3px solid var(--pink);
-        display: inline-block;
     }
+    .contact-list ul li a{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
 }
