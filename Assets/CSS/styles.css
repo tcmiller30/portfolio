@@ -70,7 +70,7 @@ p{
     height: 20vh;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("../hero.jpg");
+    background-image: url("../Images/hero.jpg");
     background-size: 50vw auto;
     /* url("https://via.placeholder.com/1000/#0000FF/#808080?Text=Placeholder"); */
     justify-content: flex-end;
