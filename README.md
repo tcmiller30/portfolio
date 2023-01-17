@@ -9,50 +9,43 @@ Provide a short description explaining the what, why, and how of your project. U
 - What problem does it solve?
 - What did you learn?
 
+This is a website that in the future may serve as a framework for a professional portfolio for a web development career after the UCI Coding Boot Camp. The website is built using a collection of flexboxes and other css elements that help the HTML code pop in a browser window. The website is broken up into 4 main sections: the header that houses the title and the navigation bar, an about me section that gives the user some info about me (the coder), a works section providing links to coding projects which will eventually highlight the skills I have learned throughout the course, and a final section that contains contact information.
+
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+N/A
 
 ## Usage
+In order to use this website, open the webpage (https://tcmiller30.github.io/uci-module-1-challenge/) in your browser to launch the homepage. To confirm non-semantic elements were replaced with semantic elements, you can open the browser's DevTools/Inspector--CTRL+Shift+I for Windows, CMD+Option+I for Mac--which will open a console panel on the side of your screen displaying the site's code.
 
-Provide instructions and examples for use. Include screenshots as needed.
+The Navbar at the top right of the screen can be used to quickly navigate to different sections of the website. The cards in the "Work" section are links that will send the user to the respective projects. There is a second navbar in the "Contact Me" section that the user can use to find a way to contact me (the coder(Travis Miller)).
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+The webpage should be responsive when viewed on different sized screens
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+Below is a screenshot of what the website looks like at fullsize.
+
+  ![Screenshot of Travis Miller's Portfolio Website](Assets/Images/uci-module-2-example.png)  
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+MDN Web Docs
+- https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+- https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+CSS-Tricks
 
-If you followed tutorials, include links to those here as well.
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- https://css-tricks.com/a-complete-guide-to-css-media-queries/
+    
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+MIT License
 
+Copyright (c) [2022] [Travis Miller]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ---
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
