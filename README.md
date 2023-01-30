@@ -1,4 +1,4 @@
-# UCI Module 2 Challenge - Advanced CSS
+# Travis Miller Portfolio - UCI Module 2 Challenge - Advanced CSS
 
 ## Description
 
